@@ -1,34 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Arreglos
 {
-    public class Pilas
+    public class Colas
     {
-        private string[] _elementos;
+        private string[] _arreglo;
         private int _actual;
-        public Pilas(int tamaño)
+        private int _principio;
+        public Colas(int tamaño)
         {
-            _elementos = new string[tamaño];
+            _arreglo = new string[tamaño];
             _actual = 0;
-        }
+            _principio = 0;
 
+        }
         private bool EstaVacio()
         {
             return (_actual == 0);
         }
         private bool EstaLleno()
         {
-            int max = _elementos.Length;
-            return (_actual > max);
+            int max = _arreglo.Length;
+            return (_actual == max);
         }
         public string ObtenerDatos()
         {
             StringBuilder datos = new StringBuilder();
-            foreach (string dato in _elementos)
+            foreach (string dato in _arreglo)
             {
                 if (!string.IsNullOrWhiteSpace(dato))
                 {
@@ -44,17 +47,17 @@ namespace Arreglos
             {
                 throw new Exception("No hay espacio suficiente");
             }
-            _elementos[_actual] = dato;
+            _arreglo[_actual] = dato;
             _actual++;
         }
         public void Eliminar()
         {
             if (EstaVacio())
             {
-                throw new Exception("No hay elementos");
+                throw new Exception("No hay elementos que eliminar");
             }
-            _actual--;
-            _elementos[_actual] = string.Empty;
+            _arreglo[_principio] = string.Empty;
+            _principio++;
         }
     }
 }
