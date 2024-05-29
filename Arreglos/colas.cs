@@ -10,18 +10,19 @@ namespace Arreglos
     public class Colas
     {
         private string[] _arreglo;
-        private int _actual;
         private int _principio;
+        private int _final;
         public Colas(int tamaño)
         {
             _arreglo = new string[tamaño];
-            _actual = 0;
             _principio = 0;
+            _final = 0;
 
         }
         private bool EstaVacio()
         {
-            return (_actual == 0);
+            return ((_principio < 1 &&  _final < 1)
+                || _principio == _final);
         }
         private bool EstaLleno()
         {
@@ -47,8 +48,8 @@ namespace Arreglos
             {
                 throw new Exception("No hay espacio suficiente");
             }
-            _arreglo[_actual] = dato;
-            _actual++;
+            _arreglo[_final] = dato;
+            _final++;
         }
         public void Eliminar()
         {
