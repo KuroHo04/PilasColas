@@ -12,11 +12,13 @@ namespace Arreglos
         private string[] _arreglo;
         private int _principio;
         private int _final;
+        private int _max;
         public Colas(int tamaño)
         {
             _arreglo = new string[tamaño];
             _principio = 0;
             _final = 0;
+            _max = _arreglo.Length - 1;
 
         }
         private bool EstaVacio()
