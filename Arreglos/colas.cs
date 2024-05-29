@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 
 namespace Arreglos
 {
@@ -23,13 +18,12 @@ namespace Arreglos
         }
         private bool EstaVacio()
         {
-            return ((_principio < 1 &&  _final < 1)
+            return ((_principio < 1 && _final < 1)
                 || _principio == _final);
         }
         private bool EstaLleno()
         {
-            int max = _arreglo.Length;
-            return (_actual == max);
+            return (_final > _max);
         }
         public string ObtenerDatos()
         {
