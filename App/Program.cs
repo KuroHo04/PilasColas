@@ -1,23 +1,23 @@
 ﻿//Listas.Pilas pilas = new Listas.Pilas();
-Listas.Colas cola = new Listas.Colas();
+//Listas.Colas cola = new Listas.Colas();
 
-Console.WriteLine(cola.ObtenerDatos());
-Console.WriteLine("-------");
-cola.Agregar("A");
-cola.Agregar("B");
-cola.Agregar("C");
-cola.Agregar("D");
-cola.Agregar("E");
-cola.Agregar("F");
-Console.WriteLine(cola.ObtenerDatos());
-Console.WriteLine("-------");
+//Console.WriteLine(cola.ObtenerDatos());
+//Console.WriteLine("-------");
+//cola.Agregar("A");
+//cola.Agregar("B");
+//cola.Agregar("C");
+//cola.Agregar("D");
+//cola.Agregar("E");
+//cola.Agregar("F");
+//Console.WriteLine(cola.ObtenerDatos());
+//Console.WriteLine("-------");
 
-cola.Eliminar();
-Console.WriteLine(cola.ObtenerDatos());
-Console.WriteLine("-------");
-cola.Eliminar();
-Console.WriteLine(cola.ObtenerDatos());
-Console.WriteLine("-------");
+//cola.Eliminar();
+//Console.WriteLine(cola.ObtenerDatos());
+//Console.WriteLine("-------");
+//cola.Eliminar();
+//Console.WriteLine(cola.ObtenerDatos());
+//Console.WriteLine("-------");
 
 //Console.WriteLine(value: pilas.ObtenerDatos());
 //Console.WriteLine("-------");
