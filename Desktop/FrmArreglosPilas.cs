@@ -29,7 +29,54 @@ namespace Desktop
                 {
                     throw new Exception("no se pudo convertir");
                 }
-                MessageBox.Show(":)");
+                _pila = new Pilas(valorConvertido);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                txtDatos.Text = string.Empty;
+                _pila.Agregar(txtAgregar.Text);
+
+                txtDatos.Text = _pila.ObtenerDatos();
+                txtAgregar.Text = string.Empty;
+                txtAgregar.Focus();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                txtDatos.Text = string.Empty;
+                _pila.Eliminar();
+                txtDatos.Text = _pila.ObtenerDatos();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnObtenerDatos_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                txtDatos.Text = string.Empty;
+                txtDatos.Text = _pila.ObtenerDatos();
             }
             catch (Exception ex)
             {
