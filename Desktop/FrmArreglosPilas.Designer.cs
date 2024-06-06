@@ -33,7 +33,7 @@
             btnAgregar = new Button();
             btnEliminar = new Button();
             btnObtenerDatos = new Button();
-            textBox1 = new TextBox();
+            txtAgregar = new TextBox();
             txtDatos = new TextBox();
             btnIniciar = new Button();
             label2 = new Label();
@@ -63,6 +63,7 @@
             btnAgregar.TabIndex = 3;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.Click += btnAgregar_Click;
             // 
             // btnEliminar
             // 
@@ -72,6 +73,7 @@
             btnEliminar.TabIndex = 4;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // btnObtenerDatos
             // 
@@ -81,13 +83,14 @@
             btnObtenerDatos.TabIndex = 5;
             btnObtenerDatos.Text = "Obtener datos";
             btnObtenerDatos.UseVisualStyleBackColor = true;
+            btnObtenerDatos.Click += btnObtenerDatos_Click;
             // 
-            // textBox1
+            // txtAgregar
             // 
-            textBox1.Location = new Point(139, 98);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 2;
+            txtAgregar.Location = new Point(139, 98);
+            txtAgregar.Name = "txtAgregar";
+            txtAgregar.Size = new Size(125, 27);
+            txtAgregar.TabIndex = 2;
             // 
             // txtDatos
             // 
@@ -129,7 +132,7 @@
             Controls.Add(btnEliminar);
             Controls.Add(btnIniciar);
             Controls.Add(btnAgregar);
-            Controls.Add(textBox1);
+            Controls.Add(txtAgregar);
             Controls.Add(txtElementos);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -146,7 +149,7 @@
         private Button btnAgregar;
         private Button btnEliminar;
         private Button btnObtenerDatos;
-        private TextBox textBox1;
+        private TextBox txtAgregar;
         private TextBox txtDatos;
         private Button btnIniciar;
         private Label label2;

@@ -2,10 +2,10 @@
 
 namespace Desktop
 {
-    public partial class FrmArreglosPilas : Form
+    public partial class FrmArreglosColas : Form
     {
-        private Pilas _pila;
-        public FrmArreglosPilas()
+        private Colas _colas;
+        public FrmArreglosColas()
         {
             InitializeComponent();
         }
@@ -22,7 +22,7 @@ namespace Desktop
                 {
                     throw new Exception("no se pudo convertir");
                 }
-                _pila = new Pilas(valorConvertido);
+                _colas = new Colas(valorConvertido);
             }
             catch (Exception ex)
             {
@@ -36,9 +36,9 @@ namespace Desktop
             try
             {
                 txtDatos.Text = string.Empty;
-                _pila.Agregar(txtAgregar.Text);
+                _colas.Agregar(txtAgregar.Text);
 
-                txtDatos.Text = _pila.ObtenerDatos();
+                txtDatos.Text = _colas.ObtenerDatos();
                 txtAgregar.Text = string.Empty;
                 txtAgregar.Focus();
             }
@@ -54,8 +54,8 @@ namespace Desktop
             try
             {
                 txtDatos.Text = string.Empty;
-                _pila.Eliminar();
-                txtDatos.Text = _pila.ObtenerDatos();
+                _colas.Eliminar();
+                txtDatos.Text = _colas.ObtenerDatos();
             }
             catch (Exception ex)
             {
@@ -69,7 +69,7 @@ namespace Desktop
             try
             {
                 txtDatos.Text = string.Empty;
-                txtDatos.Text = _pila.ObtenerDatos();
+                txtDatos.Text = _colas.ObtenerDatos();
             }
             catch (Exception ex)
             {

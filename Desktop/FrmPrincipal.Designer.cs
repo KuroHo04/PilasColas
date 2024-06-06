@@ -1,6 +1,6 @@
 ﻿namespace Desktop
 {
-    partial class Form1
+    partial class FrmPrincipal
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnArreglos = new Button();
+            btnArreglosPilas = new Button();
             btnListas = new Button();
+            btnArreglosColas = new Button();
             SuspendLayout();
             // 
-            // btnArreglos
+            // btnArreglosPilas
             // 
-            btnArreglos.Location = new Point(60, 53);
-            btnArreglos.Name = "btnArreglos";
-            btnArreglos.Size = new Size(94, 29);
-            btnArreglos.TabIndex = 0;
-            btnArreglos.Text = "Arreglos";
-            btnArreglos.UseVisualStyleBackColor = true;
-            btnArreglos.Click += btnArreglos_Click;
+            btnArreglosPilas.Location = new Point(60, 53);
+            btnArreglosPilas.Name = "btnArreglosPilas";
+            btnArreglosPilas.Size = new Size(94, 29);
+            btnArreglosPilas.TabIndex = 0;
+            btnArreglosPilas.Text = "Pilas";
+            btnArreglosPilas.UseVisualStyleBackColor = true;
+            btnArreglosPilas.Click += btnArreglos_Click;
             // 
             // btnListas
             // 
@@ -51,21 +52,33 @@
             btnListas.Text = "Listas";
             btnListas.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // btnArreglosColas
+            // 
+            btnArreglosColas.Location = new Point(199, 53);
+            btnArreglosColas.Name = "btnArreglosColas";
+            btnArreglosColas.Size = new Size(94, 29);
+            btnArreglosColas.TabIndex = 0;
+            btnArreglosColas.Text = "Colas";
+            btnArreglosColas.UseVisualStyleBackColor = true;
+            btnArreglosColas.Click += this.btnArreglos_Click1;
+            // 
+            // FrmPrincipal
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(btnListas);
-            Controls.Add(btnArreglos);
-            Name = "Form1";
+            Controls.Add(btnArreglosColas);
+            Controls.Add(btnArreglosPilas);
+            Name = "FrmPrincipal";
             Text = "Form1";
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button btnArreglos;
+        private Button btnArreglosPilas;
         private Button btnListas;
+        private Button btnArreglosColas;
     }
 }

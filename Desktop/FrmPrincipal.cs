@@ -1,8 +1,8 @@
 namespace Desktop
 {
-    public partial class Form1 : Form
+    public partial class FrmPrincipal : Form
     {
-        public Form1()
+        public FrmPrincipal()
         {
             InitializeComponent();
         }
@@ -11,6 +11,11 @@ namespace Desktop
         {
             FrmArreglosPilas frmArreglosPilas = new FrmArreglosPilas();
             frmArreglosPilas.ShowDialog();
+        }
+        private void btnArreglos_Click1(object sender, EventArgs e)
+        {
+            FrmArreglosColas frmArreglosColas = new FrmArreglosColas();
+            frmArreglosColas.ShowDialog();
         }
     }
 }
